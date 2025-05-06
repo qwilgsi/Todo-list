@@ -1,14 +1,6 @@
-import { useEffect } from "react";
 import Element from "../Element";
 
-import { getTodos } from "../../api";
-import { useDispatch, useSelector } from "react-redux";
-
-import {
-  setTodos,
-  toggleErrorState,
-  toggleLoadingState,
-} from "../../store/todos/slice";
+import { useSelector } from "react-redux";
 
 import {
   selectIsError,
@@ -20,8 +12,6 @@ function List() {
   const isLoading = useSelector(selectIsLoading);
   const isError = useSelector(selectIsError);
   const todos = useSelector(selectTodos);
-
-  const dispatch = useDispatch();
 
   return (
     <>

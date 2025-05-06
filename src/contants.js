@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:3001/todos/";
+export const API_URL = "https://tododbjson.onrender.com/todos";

@@ -11,8 +11,10 @@ function Element({ title, id, completed }) {
 
   const dispatch = useDispatch();
 
-  const statusHandler = (id) => {
-    dispatch(setComplete({ id }));
+  const statusHandler = (id, completed) => {
+    updateTodo(id, { completed }).then(() => {
+      dispatch(setComplete({ id }));
+    });
   };
 
   const deleteHandler = (id) => {
@@ -40,8 +42,9 @@ function Element({ title, id, completed }) {
           type="checkbox"
           checked={isChecked}
           onChange={() => {
-            statusHandler(id);
-            setIsChecked(!isChecked);
+            const newStatus = !isChecked;
+            statusHandler(id, newStatus);
+            setIsChecked(newStatus);
           }}
           aria-label="..."
         />
