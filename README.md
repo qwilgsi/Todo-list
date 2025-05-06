@@ -1,8 +1,24 @@
-# React + Vite
+# 📝 Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проект — простий, але повнофункціональний менеджер задач (Todo List), створений з використанням **React**, **Redux Toolkit**, **Bootstrap** і **JSON Server** для демонстрації базових навичок frontend-розробки.
 
-Currently, two official plugins are available:
+## ⚙️ Технології
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ React
+- ✅ Redux Toolkit
+- ✅ JavaScript (ES6+)
+- ✅ Bootstrap 5
+- ✅ JSON Server (імітація API)
+- ✅ LocalStorage (збереження стану)
+
+## 📦 Функціонал
+
+- Отримання задач з API або локального сховища
+- Додавання нових задач через модальну форму
+- Видалення задач
+- Зміна статусу задачі (виконано/не виконано)
+- Індикатор завантаження та обробка помилок
+
+## 🖼️ Інтерфейс
+
+Інтерфейс адаптивний і створений з урахуванням зручності користування. Компоненти чітко структуровані: `Header`, `Footer`, `Form`, `Modal`, `List`, `Element`.
