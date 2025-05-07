@@ -6,7 +6,7 @@ export function getTodos() {
 }
 
 export function deleteTodos(id) {
-  return axios.delete(API_URL + id);
+  return axios.delete(`${API_URL}${id}`);
 }
 
 export function createTodos(body) {
@@ -14,5 +14,5 @@ export function createTodos(body) {
 }
 
 export function editTodos(body, id) {
-  return axios.patch(API_URL + id, body);
+  return axios.put(`${API_URL}${id}`, body);
 }

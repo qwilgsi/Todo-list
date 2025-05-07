@@ -12,18 +12,18 @@ function Element({ title, id, completed }) {
   const dispatch = useDispatch();
 
   const statusHandler = (id) => {
-    dispatch(setComplete({ id }));
+    dispatch(setComplete({id}));
   };
 
   const deleteHandler = (id) => {
     deleteTodos(id).then(() => {
-      dispatch(deleteTodo({ id }));
+        dispatch(deleteTodo({ id }));
     });
   };
 
   const editHandler = (title, id) => {
-    dispatch(setEdited({ title, id }));
-  };
+    dispatch(setEdited({title, id}))
+  };  
 
   return (
     <li className="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
@@ -68,16 +68,15 @@ function Element({ title, id, completed }) {
         Edit
       </button>
 
+      
+
       <Link to={location.pathname + "/" + id} className="btn btn-primary">
         Show
       </Link>
-      <button
-        type="button"
-        className="btn btn-danger  ms-3"
-        onClick={() => {
-          deleteHandler(id);
-        }}
-      >
+      <button 
+      type="button" 
+      className="btn btn-danger  ms-3"
+      onClick={()=>{deleteHandler(id)}}>
         &times;
       </button>
     </li>
